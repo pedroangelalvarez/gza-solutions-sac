@@ -10,12 +10,12 @@ import { Sheet, SheetContent, SheetTrigger, SheetClose } from '@/components/ui/s
 import { cn } from '@/lib/utils';
 
 const navItems = [
-  { href: '/', label: 'Home' },
-  { href: '/about', label: 'About Us' },
-  { href: '/services', label: 'Services' },
-  { href: '/projects', label: 'Projects' },
-  { href: '/testimonials', label: 'Testimonials' },
-  { href: '/contact', label: 'Contact Us' },
+  { href: '/', label: 'Inicio' },
+  { href: '/about', label: 'Acerca de Nosotros' },
+  { href: '/services', label: 'Servicios' },
+  { href: '/projects', label: 'Proyectos' },
+  { href: '/testimonials', label: 'Testimonios' },
+  { href: '/contact', label: 'Contactanos' },
 ];
 
 export function Header() {

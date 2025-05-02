@@ -24,11 +24,11 @@ export default function HomePage() {
             Alvarez Constructora
           </h1>
           <p className="text-xl md:text-2xl text-foreground/80 mb-8 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
-            Building the future with integrity and excellence.
+            Construyendo el futuro con integridad y excelencia.
           </p>
           <div className="animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
             <Button asChild size="lg">
-              <Link href="/services">Explore Our Services</Link>
+              <Link href="/services">Explora Nuestros Servicios</Link>
             </Button>
           </div>
         </div>
@@ -37,22 +37,22 @@ export default function HomePage() {
       {/* Placeholder for additional sections (e.g., featured projects, brief about) */}
       <section className="py-16 md:py-24 bg-background">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-4">Welcome</h2>
+          <h2 className="text-3xl font-bold mb-4">Bienvenido</h2>
           <p className="text-lg text-foreground/70 max-w-3xl mx-auto">
-            Discover how Alvarez Constructora brings innovation, quality, and reliability to every project. We are dedicated to exceeding expectations and building lasting relationships.
+            Descubre cómo Álvarez Constructora aporta innovación, calidad y fiabilidad a cada proyecto. Estamos dedicados a superar expectativas y construir relaciones duraderas.
           </p>
            <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-8">
              <div className="bg-card p-6 rounded-lg shadow-sm border border-border transition-shadow hover:shadow-md">
-                <h3 className="text-xl font-semibold mb-2 text-primary">Quality Craftsmanship</h3>
-                <p className="text-foreground/70">We use the finest materials and skilled professionals to ensure superior results.</p>
+                <h3 className="text-xl font-semibold mb-2 text-primary">Artesanía de Calidad</h3>
+                <p className="text-foreground/70">Utilizamos los mejores materiales y profesionales capacitados para asegurar resultados superiores.</p>
              </div>
              <div className="bg-card p-6 rounded-lg shadow-sm border border-border transition-shadow hover:shadow-md">
-                <h3 className="text-xl font-semibold mb-2 text-primary">Client-Focused</h3>
-                <p className="text-foreground/70">Your vision is our priority. We collaborate closely with you throughout the process.</p>
+                <h3 className="text-xl font-semibold mb-2 text-primary">Enfoque en el Cliente</h3>
+                <p className="text-foreground/70">Tu visión es nuestra prioridad. Colaboramos estrechamente contigo a lo largo de todo el proceso.</p>
              </div>
              <div className="bg-card p-6 rounded-lg shadow-sm border border-border transition-shadow hover:shadow-md">
-                <h3 className="text-xl font-semibold mb-2 text-primary">Timely Delivery</h3>
-                <p className="text-foreground/70">We respect your time and strive to complete projects on schedule and within budget.</p>
+                <h3 className="text-xl font-semibold mb-2 text-primary">Entrega Oportuna</h3>
+                <p className="text-foreground/70">Respetamos tu tiempo y nos esforzamos por completar los proyectos a tiempo y dentro del presupuesto.</p>
              </div>
            </div>
         </div>
