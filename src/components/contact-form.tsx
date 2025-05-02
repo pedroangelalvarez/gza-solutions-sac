@@ -20,16 +20,16 @@ import { Loader2 } from 'lucide-react';
 
 const formSchema = z.object({
   name: z.string().min(2, {
-    message: 'Name must be at least 2 characters.',
+    message: 'El nombre debe tener al menos 2 caracteres.',
   }),
   email: z.string().email({
-    message: 'Please enter a valid email address.',
+    message: 'Por favor, introduce una dirección de correo válida.',
   }),
   subject: z.string().min(5, {
-    message: 'Subject must be at least 5 characters.',
+    message: 'El asunto debe tener al menos 5 caracteres.',
   }),
   message: z.string().min(10, {
-    message: 'Message must be at least 10 characters.',
+    message: 'El mensaje debe tener al menos 10 caracteres.',
   }),
 });
 
@@ -50,17 +50,17 @@ export function ContactForm() {
   // Placeholder submit handler
   async function onSubmit(values: z.infer<typeof formSchema>) {
     setIsSubmitting(true);
-    console.log('Form submitted:', values);
+    console.log('Formulario enviado:', values);
 
-    // Simulate API call
+    // Simular llamada a la API
     await new Promise(resolve => setTimeout(resolve, 1500));
 
     setIsSubmitting(false);
     toast({
-      title: 'Message Sent!',
-      description: 'Thank you for contacting us. We will get back to you shortly.',
+      title: '¡Mensaje enviado!',
+      description: 'Gracias por contactarnos. Nos pondremos en contacto contigo pronto.',
     });
-    form.reset(); // Reset form fields after successful submission
+    form.reset(); // Restablecer los campos del formulario tras el envío exitoso
   }
 
   return (
@@ -74,7 +74,7 @@ export function ContactForm() {
               <FormItem>
                 <FormLabel>Name</FormLabel>
                 <FormControl>
-                  <Input placeholder="Your Name" {...field} aria-required="true" />
+                  <Input placeholder="Tu nombre" {...field} aria-required="true" />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -87,7 +87,7 @@ export function ContactForm() {
               <FormItem>
                 <FormLabel>Email</FormLabel>
                 <FormControl>
-                  <Input type="email" placeholder="your.email@example.com" {...field} aria-required="true" />
+                  <Input type="email" placeholder="tu.correo@ejemplo.com" {...field} aria-required="true" />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -101,7 +101,7 @@ export function ContactForm() {
             <FormItem>
               <FormLabel>Subject</FormLabel>
               <FormControl>
-                <Input placeholder="Subject of your message" {...field} aria-required="true" />
+                <Input placeholder="Asunto de tu mensaje" {...field} aria-required="true" />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -115,7 +115,7 @@ export function ContactForm() {
               <FormLabel>Message</FormLabel>
               <FormControl>
                 <Textarea
-                  placeholder="Tell us how we can help..."
+                  placeholder="Cuéntanos cómo podemos ayudarte..."
                   className="min-h-[120px]"
                   {...field}
                   aria-required="true"
@@ -129,10 +129,10 @@ export function ContactForm() {
           {isSubmitting ? (
             <>
               <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-              Sending...
+              Enviando...
             </>
           ) : (
-             'Send Message'
+             'Enviar mensaje'
           )}
         </Button>
       </form>

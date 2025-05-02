@@ -56,9 +56,9 @@ export default function TestimonialsPage() {
   return (
     <div className="bg-secondary py-16 md:py-24">
       <div className="container mx-auto px-4">
-        <h1 className="text-4xl md:text-5xl font-bold text-center mb-12 text-primary">Client Testimonials</h1>
+        <h1 className="text-4xl md:text-5xl font-bold text-center mb-12 text-primary">Testimonios de Clientes</h1>
         <p className="text-lg text-foreground/70 text-center max-w-3xl mx-auto mb-16">
-          Hear what our satisfied clients have to say about their experience working with Alvarez Constructora.
+          Descubre lo que nuestros clientes satisfechos tienen que decir sobre su experiencia trabajando con Alvarez Constructora.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">

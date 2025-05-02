@@ -20,16 +20,16 @@ export default function ProjectsPage() {
   return (
     <div className="bg-background py-16 md:py-24">
       <div className="container mx-auto px-4">
-        <h1 className="text-4xl md:text-5xl font-bold text-center mb-12 text-primary">Our Projects</h1>
+        <h1 className="text-4xl md:text-5xl font-bold text-center mb-12 text-primary">Nuestros Proyectos</h1>
         <p className="text-lg text-foreground/70 text-center max-w-3xl mx-auto mb-10">
-          Browse through a selection of our completed projects, showcasing our diverse capabilities and commitment to quality across various sectors.
+          Explora una selección de nuestros proyectos completados, que muestran nuestras diversas capacidades y compromiso con la calidad en varios sectores.
         </p>
 
         <Tabs defaultValue="All" className="w-full">
           <TabsList className="grid w-full grid-cols-2 sm:grid-cols-3 md:grid-cols-5 mb-10 mx-auto max-w-2xl h-auto">
             {categories.map((category) => (
               <TabsTrigger key={category} value={category} className="py-2 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">
-                {category}
+                {category === 'All' ? 'Todos' : category}
               </TabsTrigger>
             ))}
           </TabsList>

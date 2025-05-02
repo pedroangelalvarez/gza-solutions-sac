@@ -4,32 +4,32 @@ import { Home, Building, Wrench, Ruler } from 'lucide-react'; // Using relevant 
 
 const services = [
   {
-    title: 'Residential Construction',
-    description: 'Building custom homes from the ground up, tailored to your lifestyle and preferences. We handle everything from design consultation to final finishing touches.',
+    title: 'Construcción Residencial',
+    description: 'Construimos casas personalizadas desde cero, adaptadas a tu estilo de vida y preferencias. Nos encargamos de todo, desde la consulta de diseño hasta los toques finales.',
     icon: Home,
     image: 'https://picsum.photos/600/400?random=1',
-    aiHint: 'modern house exterior',
+    aiHint: 'exterior de casa moderna',
   },
   {
-    title: 'Commercial Projects',
-    description: 'Developing functional and aesthetically pleasing commercial spaces, including offices, retail stores, and industrial facilities, on time and within budget.',
+    title: 'Proyectos Comerciales',
+    description: 'Desarrollamos espacios comerciales funcionales y estéticamente agradables, incluyendo oficinas, tiendas y fábricas, cumpliendo con los plazos y presupuestos.',
     icon: Building,
     image: 'https://picsum.photos/600/400?random=2',
-    aiHint: 'modern office building',
+    aiHint: 'edificio de oficinas moderno',
   },
   {
-    title: 'Remodeling & Renovations',
-    description: 'Transforming existing spaces with high-quality remodeling services for kitchens, bathrooms, additions, and whole-home renovations.',
+    title: 'Remodelaciones y Renovaciones',
+    description: 'Transformamos espacios existentes con servicios de remodelación de alta calidad para cocinas, baños, ampliaciones y renovaciones completas del hogar.',
     icon: Wrench,
     image: 'https://picsum.photos/600/400?random=3',
-    aiHint: 'kitchen renovation modern',
+    aiHint: 'renovación de cocina moderna',
   },
   {
-    title: 'Architectural Design',
-    description: 'Offering comprehensive architectural design services, translating your vision into detailed plans ready for construction, focusing on innovation and efficiency.',
+    title: 'Diseño Arquitectónico',
+    description: 'Ofrecemos servicios completos de diseño arquitectónico, traduciendo tu visión en planos detallados listos para la construcción, con un enfoque en innovación y eficiencia.',
     icon: Ruler,
     image: 'https://picsum.photos/600/400?random=4',
-    aiHint: 'architectural blueprints drawing',
+    aiHint: 'planos arquitectónicos dibujo',
   },
 ];
 
@@ -37,9 +37,9 @@ export default function ServicesPage() {
   return (
     <div className="bg-background py-16 md:py-24">
       <div className="container mx-auto px-4">
-        <h1 className="text-4xl md:text-5xl font-bold text-center mb-12 text-primary">Our Services</h1>
+        <h1 className="text-4xl md:text-5xl font-bold text-center mb-12 text-primary">Nuestros Servicios</h1>
         <p className="text-lg text-foreground/70 text-center max-w-3xl mx-auto mb-16">
-          Alvarez Constructora provides a comprehensive range of construction services. We combine expertise, quality materials, and meticulous project management to deliver outstanding results.
+          Alvarez Constructora ofrece una amplia gama de servicios de construcción. Combinamos experiencia, materiales de calidad y una gestión de proyectos meticulosa para entregar resultados excepcionales.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
