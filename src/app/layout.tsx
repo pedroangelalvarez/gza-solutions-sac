@@ -8,13 +8,13 @@ import { cn } from '@/lib/utils';
 
 const inter = Inter({
   subsets: ['latin'],
-  variable: '--font-sans', // Use --font-sans for Tailwind integration
+  variable: '--font-sans', // Usa --font-sans para la integración con Tailwind
 });
 
 export const metadata: Metadata = {
-  title: 'Alvarez Constructora - Building the Future',
-  description: 'Alvarez Constructora offers premier construction services including residential, commercial, remodeling, and architectural design. Building the future with integrity and excellence.',
-  keywords: 'construction, residential construction, commercial projects, remodeling, architectural design, Alvarez Constructora, building, contractor',
+  title: 'Alvarez Constructora - Construyendo el Futuro',
+  description: 'Alvarez Constructora ofrece servicios de construcción de primer nivel, incluyendo construcción residencial, proyectos comerciales, remodelaciones y diseño arquitectónico. Construyendo el futuro con integridad y excelencia.',
+  keywords: 'construcción, construcción residencial, proyectos comerciales, remodelaciones, diseño arquitectónico, Alvarez Constructora, construcción, contratista',
 };
 
 export default function RootLayout({
@@ -23,7 +23,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="es" className="scroll-smooth">
       <body className={cn('antialiased font-sans bg-background text-foreground min-h-screen flex flex-col', inter.variable)}>
         <Header />
         <main className="flex-grow">{children}</main>

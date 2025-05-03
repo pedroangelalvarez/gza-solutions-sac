@@ -2,19 +2,19 @@ import Image from 'next/image';
 import { Card, CardContent } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
-// Placeholder project data
+// Datos de proyectos de ejemplo
 const projects = [
-  { id: 1, title: 'Modern Family Home', category: 'Residential', image: 'https://picsum.photos/600/400?random=10', aiHint: 'modern family house exterior sunset' },
-  { id: 2, title: 'Downtown Office Complex', category: 'Commercial', image: 'https://picsum.photos/600/400?random=11', aiHint: 'modern office building exterior day' },
-  { id: 3, title: 'Luxury Kitchen Remodel', category: 'Remodeling', image: 'https://picsum.photos/600/400?random=12', aiHint: 'luxury modern kitchen interior' },
-  { id: 4, title: 'Sustainable Villa Design', category: 'Design', image: 'https://picsum.photos/600/400?random=13', aiHint: 'sustainable house design sketch' },
-  { id: 5, title: 'Beachfront Property', category: 'Residential', image: 'https://picsum.photos/600/400?random=14', aiHint: 'beach house exterior modern' },
-  { id: 6, title: 'Retail Store Fit-out', category: 'Commercial', image: 'https://picsum.photos/600/400?random=15', aiHint: 'modern retail store interior empty' },
-  { id: 7, title: 'Historic Home Restoration', category: 'Remodeling', image: 'https://picsum.photos/600/400?random=16', aiHint: 'historic house exterior restored' },
-  { id: 8, title: 'Community Center Blueprint', category: 'Design', image: 'https://picsum.photos/600/400?random=17', aiHint: 'architectural blueprint community center' },
+  { id: 1, title: 'Casa Familiar Moderna', category: 'Residencial', image: 'https://picsum.photos/600/400?random=10', aiHint: 'exterior de casa familiar moderna al atardecer' },
+  { id: 2, title: 'Complejo de Oficinas en el Centro', category: 'Comercial', image: 'https://picsum.photos/600/400?random=11', aiHint: 'edificio de oficinas moderno exterior de día' },
+  { id: 3, title: 'Remodelación de Cocina de Lujo', category: 'Remodelación', image: 'https://picsum.photos/600/400?random=12', aiHint: 'interior de cocina moderna de lujo' },
+  { id: 4, title: 'Diseño de Villa Sostenible', category: 'Diseño', image: 'https://picsum.photos/600/400?random=13', aiHint: 'boceto de diseño de casa sostenible' },
+  { id: 5, title: 'Propiedad Frente al Mar', category: 'Residencial', image: 'https://picsum.photos/600/400?random=14', aiHint: 'exterior moderno de casa frente al mar' },
+  { id: 6, title: 'Acondicionamiento de Tienda Minorista', category: 'Comercial', image: 'https://picsum.photos/600/400?random=15', aiHint: 'interior moderno de tienda minorista vacía' },
+  { id: 7, title: 'Restauración de Casa Histórica', category: 'Remodelación', image: 'https://picsum.photos/600/400?random=16', aiHint: 'exterior restaurado de casa histórica' },
+  { id: 8, title: 'Plano de Centro Comunitario', category: 'Diseño', image: 'https://picsum.photos/600/400?random=17', aiHint: 'plano arquitectónico de centro comunitario' },
 ];
 
-const categories = ['All', 'Residential', 'Commercial', 'Remodeling', 'Design'];
+const categories = ['Todos', 'Residencial', 'Comercial', 'Remodelación', 'Diseño'];
 
 export default function ProjectsPage() {
   return (
@@ -25,11 +25,11 @@ export default function ProjectsPage() {
           Explora una selección de nuestros proyectos completados, que muestran nuestras diversas capacidades y compromiso con la calidad en varios sectores.
         </p>
 
-        <Tabs defaultValue="All" className="w-full">
+        <Tabs defaultValue="Todos" className="w-full">
           <TabsList className="grid w-full grid-cols-2 sm:grid-cols-3 md:grid-cols-5 mb-10 mx-auto max-w-2xl h-auto">
             {categories.map((category) => (
               <TabsTrigger key={category} value={category} className="py-2 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">
-                {category === 'All' ? 'Todos' : category}
+                {category}
               </TabsTrigger>
             ))}
           </TabsList>
@@ -38,7 +38,7 @@ export default function ProjectsPage() {
             <TabsContent key={category} value={category}>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {projects
-                  .filter((project) => category === 'All' || project.category === category)
+                  .filter((project) => category === 'Todos' || project.category === category)
                   .map((project) => (
                     <Card key={project.id} className="overflow-hidden group border-secondary shadow-sm hover:shadow-md transition-shadow duration-300">
                       <CardContent className="p-0">
