@@ -8,7 +8,7 @@ const testimonials = [
     id: 1,
     name: 'John & Jane Smith',
     project: 'Construcción de Casa Personalizada',
-    review: '¡Alvarez Constructora superó nuestras expectativas! Su atención al detalle y comunicación durante todo el proceso fueron excepcionales. ¡Nos encanta nuestra nueva casa!',
+    review: '¡GZA Solutions S.A.C. superó nuestras expectativas! Su atención al detalle y comunicación durante todo el proceso fueron excepcionales. ¡Nos encanta nuestra nueva casa!',
     rating: 5,
     avatar: 'https://picsum.photos/100/100?random=20',
     aiHint: 'pareja sonriendo feliz',
@@ -35,7 +35,7 @@ const testimonials = [
     id: 4,
     name: 'David Lee',
     project: 'Diseño de Espacio Comercial',
-    review: 'Desde el concepto hasta el diseño final, Alvarez Constructora brindó soluciones innovadoras y orientación experta. Su equipo de arquitectura es de primera categoría.',
+    review: 'Desde el concepto hasta el diseño final, GZA Solutions S.A.C. brindó soluciones innovadoras y orientación experta. Su equipo de arquitectura es de primera categoría.',
     rating: 4, // Ejemplo de una calificación de 4 estrellas
     avatar: 'https://picsum.photos/100/100?random=23',
     aiHint: 'hombre arquitecto pensativo',
@@ -58,7 +58,7 @@ export default function TestimonialsPage() {
       <div className="container mx-auto px-4">
         <h1 className="text-4xl md:text-5xl font-bold text-center mb-12 text-primary">Testimonios de Clientes</h1>
         <p className="text-lg text-foreground/70 text-center max-w-3xl mx-auto mb-16">
-          Descubre lo que nuestros clientes satisfechos tienen que decir sobre su experiencia trabajando con Alvarez Constructora.
+          Descubre lo que nuestros clientes satisfechos tienen que decir sobre su experiencia trabajando con GZA Solutions S.A.C..
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">

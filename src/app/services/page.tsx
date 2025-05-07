@@ -39,7 +39,7 @@ export default function ServicesPage() {
       <div className="container mx-auto px-4">
         <h1 className="text-4xl md:text-5xl font-bold text-center mb-12 text-primary">Nuestros Servicios</h1>
         <p className="text-lg text-foreground/70 text-center max-w-3xl mx-auto mb-16">
-          Alvarez Constructora ofrece una amplia gama de servicios de construcción. Combinamos experiencia, materiales de calidad y una gestión de proyectos meticulosa para entregar resultados excepcionales.
+          GZA Solutions S.A.C. ofrece una amplia gama de servicios de construcción. Combinamos experiencia, materiales de calidad y una gestión de proyectos meticulosa para entregar resultados excepcionales.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

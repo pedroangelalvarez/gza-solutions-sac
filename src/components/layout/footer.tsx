@@ -10,7 +10,7 @@ export function Footer() {
       <div className="container">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <p className="text-sm text-center md:text-left">
-            &copy; {currentYear} Alvarez Constructora. All rights reserved.
+            &copy; {currentYear} GZA Solutions S.A.C.. All rights reserved.
           </p>
           <div className="flex space-x-4">
             <Button variant="ghost" size="icon" asChild className="text-secondary-foreground hover:text-primary transition-colors">

@@ -1,3 +1,4 @@
+import { FloatingChatButton } from '../components/ui/FloatingChatButton';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
@@ -12,9 +13,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'Alvarez Constructora - Construyendo el Futuro',
-  description: 'Alvarez Constructora ofrece servicios de construcción de primer nivel, incluyendo construcción residencial, proyectos comerciales, remodelaciones y diseño arquitectónico. Construyendo el futuro con integridad y excelencia.',
-  keywords: 'construcción, construcción residencial, proyectos comerciales, remodelaciones, diseño arquitectónico, Alvarez Constructora, construcción, contratista',
+  title: 'GZA Solutions S.A.C. - Construyendo el Futuro',
+  description: 'GZA Solutions S.A.C. ofrece servicios de construcción de primer nivel, incluyendo construcción residencial, proyectos comerciales, remodelaciones y diseño arquitectónico. Construyendo el futuro con integridad y excelencia.',
+  keywords: 'construcción, construcción residencial, proyectos comerciales, remodelaciones, diseño arquitectónico, GZA Solutions S.A.C., construcción, contratista',
 };
 
 export default function RootLayout({
@@ -29,6 +30,7 @@ export default function RootLayout({
         <main className="flex-grow">{children}</main>
         <Footer />
         <Toaster />
+      <FloatingChatButton />
       </body>
     </html>
   );

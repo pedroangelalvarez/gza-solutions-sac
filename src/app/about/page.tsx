@@ -6,12 +6,12 @@ export default function AboutPage() {
   return (
     <div className="bg-background py-16 md:py-24">
       <div className="container mx-auto px-4">
-        <h1 className="text-4xl md:text-5xl font-bold text-center mb-12 text-primary">Acerca de Alvarez Constructora</h1>
+        <h1 className="text-4xl md:text-5xl font-bold text-center mb-12 text-primary">Acerca de GZA Solutions S.A.C.</h1>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
           <div>
             <h2 className="text-3xl font-semibold mb-4">Nuestra Historia</h2>
             <p className="text-lg text-foreground/80 mb-4">
-              Fundada sobre los principios de calidad, integridad y satisfacción del cliente, Alvarez Constructora ha crecido de ser un pequeño constructor local a una empresa de construcción respetada, conocida por abordar proyectos de todos los tamaños con una dedicación inquebrantable.
+              Fundada sobre los principios de calidad, integridad y satisfacción del cliente, GZA Solutions S.A.C. ha crecido de ser un pequeño constructor local a una empresa de construcción respetada, conocida por abordar proyectos de todos los tamaños con una dedicación inquebrantable.
             </p>
             <p className="text-lg text-foreground/80">
               Nuestro equipo está compuesto por profesionales experimentados apasionados por la construcción y comprometidos con ofrecer excelencia. Creemos en construir no solo estructuras, sino también relaciones sólidas con nuestros clientes basadas en la confianza y la transparencia.

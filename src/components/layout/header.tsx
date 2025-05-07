@@ -2,6 +2,7 @@
 
 import * as React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { Menu, X, HardHat } from 'lucide-react';
 
@@ -26,8 +27,10 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center gap-2 mr-6">
-          <HardHat className="h-6 w-6 text-primary" />
-          <span className="font-bold text-lg">Alvarez Constructora</span>
+          <div className="relative h-10 w-36">
+            <Image src="/GZASolutionsSAClogo.svg" alt="GZA Solutions S.A.C. Logo" fill className="object-contain" />
+          </div>
+          <span className="font-bold text-lg">GZA Solutions S.A.C.</span>
         </Link>
 
         {/* Desktop Navigation */}
@@ -59,7 +62,7 @@ export function Header() {
                <div className="flex justify-between items-center mb-6">
                  <Link href="/" className="flex items-center gap-2" onClick={() => setIsMobileMenuOpen(false)}>
                    <HardHat className="h-6 w-6 text-primary" />
-                   <span className="font-bold text-lg">Alvarez Constructora</span>
+                   <span className="font-bold text-lg">GZA Solutions S.A.C.</span>
                  </Link>
                 <SheetClose asChild>
                    <Button variant="ghost" size="icon">
