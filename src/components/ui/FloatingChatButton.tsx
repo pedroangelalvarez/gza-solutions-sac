@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import axios from 'axios';
 import ReactMarkdown from 'react-markdown';
+import Image from 'next/image';
 
 export function FloatingChatButton() {
   const [isOpen, setIsOpen] = useState(false);
@@ -47,10 +48,28 @@ export function FloatingChatButton() {
 
     const ASK_API_URL = process.env.NEXT_PUBLIC_ASK_API_PRODUCTION;
 
+    // Convertir el historial de chat al formato requerido, incluyendo el mensaje actual
+    const history = [
+      // Solo incluir el mensaje del sistema si hay 2 o menos elementos en el historial
+      ...(chatHistory.length <= 2 ? [{
+        role: "system",
+        content: "Eres un asistente de la empresa GZA Solutions SAC que ofrece servicios de Ingenieria y Mantenimiento."
+      }] : []),
+      ...chatHistory.map(chat => ({
+        role: chat.sender === 'user' ? 'user' : 'assistant',
+        content: chat.content
+      })),
+      {
+        role: 'user',
+        content: message
+      }
+    ];
+
     setIsSending(true);
     try {
+      console.log('El valor actual de history es:', history);
       const response = await axios.post(ASK_API_URL + '/ask', {
-        content: message,
+        content: history
       });
 
       const content = response.data.result;
@@ -78,11 +97,12 @@ export function FloatingChatButton() {
           onClick={handleOpenChat}
           className="bg-primary text-white px-4 py-2 rounded-full shadow-lg hover:bg-primary-dark transition"
           aria-label="Abrir chat"
+          
         >
-          Contactar con un asesor
+          <Image src="/images/Agente.png" alt="Icono Asesor" width={32} height={32}  />
         </button>
       ) : isLoading ? ( // Muestra el loader skeleton mientras carga
-        <div className="bg-white shadow-lg rounded-lg p-4 w-72 flex flex-col items-center justify-center">
+        <div className="bg-gray-100 shadow-lg rounded-lg p-4 w-72 flex flex-col items-center justify-center">
           <div className="animate-pulse w-full">
             <div className="h-4 bg-gray-300 rounded mb-2"></div>
             <div className="h-4 bg-gray-300 rounded mb-2"></div>
@@ -90,12 +110,12 @@ export function FloatingChatButton() {
           </div>
         </div>
       ) : (
-        <div className="bg-white shadow-lg rounded-lg p-4 w-72 flex flex-col">
+        <div className="bg-gray-100 shadow-lg rounded-lg p-4 w-72 flex flex-col">
           <div className="flex justify-between items-center mb-2">
             <h3 className="text-lg font-semibold">Chat</h3>
             <button
               onClick={() => setIsOpen(false)}
-              className="text-gray-500 hover:text-gray-700 transition"
+              className="text-gray-600 hover:text-primary transition"
               aria-label="Cerrar chat"
             >
               ✕
@@ -113,11 +133,11 @@ export function FloatingChatButton() {
                 }`}
               >
                 {chat.sender === 'user' ? (
-                  <span className="inline-block px-3 py-2 rounded-lg bg-blue-500 text-white">
+                  <span className="inline-block px-3 py-2 rounded-lg bg-primary text-white">
                     {chat.content}
                   </span>
                 ) : (
-                  <div className="inline-block px-3 py-2 rounded-lg bg-gray-200 text-black">
+                  <div className="inline-block px-3 py-2 rounded-lg bg-gray-100 text-gray-800">
                     <ReactMarkdown>{chat.content}</ReactMarkdown>
                   </div>
                 )}
@@ -140,7 +160,7 @@ export function FloatingChatButton() {
                   }
                 }}
                 placeholder="Escribe tu mensaje..."
-                className="w-full border border-gray-300 rounded-md p-2 mb-2 focus:outline-none focus:ring-2 focus:ring-primary"
+                className="w-full border border-gray-300 rounded-md p-2 mb-2 focus:outline-none focus:ring-2 focus:ring-primary bg-white"
                 rows={2}
               />
               <button

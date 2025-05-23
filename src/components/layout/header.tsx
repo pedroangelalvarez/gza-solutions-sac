@@ -14,8 +14,8 @@ const navItems = [
   { href: '/', label: 'Inicio' },
   { href: '/about', label: 'Acerca de Nosotros' },
   { href: '/services', label: 'Servicios' },
-  { href: '/projects', label: 'Proyectos' },
-  { href: '/testimonials', label: 'Testimonios' },
+  //{ href: '/projects', label: 'Proyectos' },
+  //{ href: '/testimonials', label: 'Testimonios' },
   { href: '/contact', label: 'Contactanos' },
 ];
 

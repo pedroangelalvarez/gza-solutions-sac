@@ -13,7 +13,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'GZA Solutions S.A.C. - Construyendo el Futuro',
+  title: 'GZA Solutions S.A.C. - Ingenieria y Mantenimiento',
   description: 'GZA Solutions S.A.C. ofrece servicios de construcción de primer nivel, incluyendo construcción residencial, proyectos comerciales, remodelaciones y diseño arquitectónico. Construyendo el futuro con integridad y excelencia.',
   keywords: 'construcción, construcción residencial, proyectos comerciales, remodelaciones, diseño arquitectónico, GZA Solutions S.A.C., construcción, contratista',
 };
@@ -30,7 +30,7 @@ export default function RootLayout({
         <main className="flex-grow">{children}</main>
         <Footer />
         <Toaster />
-      <FloatingChatButton />
+      {/* Temporarily hidden FloatingChatButton */}
       </body>
     </html>
   );

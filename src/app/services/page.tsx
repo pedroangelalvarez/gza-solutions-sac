@@ -1,35 +1,35 @@
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { Home, Building, Wrench, Ruler } from 'lucide-react'; // Using relevant icons
+import { Settings, ShieldCheck, Layers, Construction } from 'lucide-react'; // Nuevos íconos sugeridos
 
 const services = [
   {
-    title: 'Construcción Residencial',
-    description: 'Construimos casas personalizadas desde cero, adaptadas a tu estilo de vida y preferencias. Nos encargamos de todo, desde la consulta de diseño hasta los toques finales.',
-    icon: Home,
-    image: 'https://picsum.photos/600/400?random=1',
-    aiHint: 'exterior de casa moderna',
+    title: 'Desarrollo de Proyectos de Ingeniería',
+    description: 'Diseño y ampliación de instalaciones industriales (Greenfield y Brownfield), con enfoque en ingeniería de interconexiones y metodología BIM. Cumplimiento de normas ISO, API y NEC.',
+    icon: Construction,
+    image: '/images/service1.jpeg',
+    aiHint: 'infraestructura industrial con planos técnicos',
   },
   {
-    title: 'Proyectos Comerciales',
-    description: 'Desarrollamos espacios comerciales funcionales y estéticamente agradables, incluyendo oficinas, tiendas y fábricas, cumpliendo con los plazos y presupuestos.',
-    icon: Building,
-    image: 'https://picsum.photos/600/400?random=2',
-    aiHint: 'edificio de oficinas moderno',
+    title: 'Ensayos No Destructivos y Análisis Avanzado',
+    description: 'Servicios de inspección como NDT/NDT CONCRET, análisis de resonancia, vibración, ultrasonido y pruebas en laboratorio certificado por INACAL.',
+    icon: ShieldCheck,
+    image: '/images/service2.jpeg',
+    aiHint: 'ingenieros haciendo pruebas de laboratorio en equipo industrial',
   },
   {
-    title: 'Remodelaciones y Renovaciones',
-    description: 'Transformamos espacios existentes con servicios de remodelación de alta calidad para cocinas, baños, ampliaciones y renovaciones completas del hogar.',
-    icon: Wrench,
-    image: 'https://picsum.photos/600/400?random=3',
-    aiHint: 'renovación de cocina moderna',
+    title: 'Tecnología Avanzada en Ingeniería',
+    description: 'Aplicación de SmartPlant® y escaneo 3D. Soporte en modelos 3D para diseño y operación eficiente, con integración BIM 4D para planificación de obra.',
+    icon: Layers,
+    image: '/images/service3.jpeg',
+    aiHint: 'modelo digital 3D de planta industrial en pantalla',
   },
   {
-    title: 'Diseño Arquitectónico',
-    description: 'Ofrecemos servicios completos de diseño arquitectónico, traduciendo tu visión en planos detallados listos para la construcción, con un enfoque en innovación y eficiencia.',
-    icon: Ruler,
-    image: 'https://picsum.photos/600/400?random=4',
-    aiHint: 'planos arquitectónicos dibujo',
+    title: 'Servicios de Planta y Mantenimiento',
+    description: 'Diseño de plantas de procesamiento, sistemas de bombeo y piping, mantenimiento de líneas de vapor, reparación con soldadura especializada y soporte en paradas de planta.',
+    icon: Settings,
+    image: '/images/service4.jpeg',
+    aiHint: 'operario reparando maquinaria industrial en planta minera',
   },
 ];
 
@@ -39,14 +39,14 @@ export default function ServicesPage() {
       <div className="container mx-auto px-4">
         <h1 className="text-4xl md:text-5xl font-bold text-center mb-12 text-primary">Nuestros Servicios</h1>
         <p className="text-lg text-foreground/70 text-center max-w-3xl mx-auto mb-16">
-          GZA Solutions S.A.C. ofrece una amplia gama de servicios de construcción. Combinamos experiencia, materiales de calidad y una gestión de proyectos meticulosa para entregar resultados excepcionales.
+          GZA Solutions S.A.C. ofrece soluciones de ingeniería avanzadas para el sector industrial y minero, integrando tecnología de punta, diseño especializado y experiencia multidisciplinaria.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {services.map((service, index) => (
             <Card key={index} className="overflow-hidden border-secondary shadow-sm hover:shadow-lg transition-all duration-300 group">
               <div className="relative h-60 w-full overflow-hidden">
-                 <Image
+                <Image
                   src={service.image}
                   alt={service.title}
                   layout="fill"
@@ -56,8 +56,8 @@ export default function ServicesPage() {
                 />
               </div>
               <CardHeader className="flex flex-row items-center gap-3 pb-3">
-                 <service.icon className="h-8 w-8 text-primary flex-shrink-0" />
-                 <CardTitle className="text-2xl">{service.title}</CardTitle>
+                <service.icon className="h-8 w-8 text-primary flex-shrink-0" />
+                <CardTitle className="text-2xl">{service.title}</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-base text-foreground/70">

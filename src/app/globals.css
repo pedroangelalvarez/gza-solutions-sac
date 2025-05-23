@@ -5,19 +5,19 @@
 @layer base {
   :root {
     --background: 0 0% 100%; /* White */
-    --foreground: 216 10% 23%; /* Dark Blue-Gray Text */
-    --card: 0 0% 100%; /* White */
-    --card-foreground: 216 10% 23%; /* Dark Blue-Gray Text */
-    --popover: 0 0% 100%; /* White */
-    --popover-foreground: 216 10% 23%; /* Dark Blue-Gray Text */
-    --primary: 180 100% 25.1%; /* Teal */
-    --primary-foreground: 0 0% 100%; /* White */
-    --secondary: 210 15% 96%; /* Lighter Blue-Gray */
-    --secondary-foreground: 216 10% 35%; /* Medium Dark Blue-Gray Text */
-    --muted: 210 15% 91%; /* Light Blue-Gray */
-    --muted-foreground: 216 10% 45%; /* Medium Gray Text */
-    --accent: 180 100% 25.1%; /* Teal */
-    --accent-foreground: 0 0% 100%; /* White */
+    --foreground: 215 14% 18%; /* #2E2E2E - Texto principal */
+    --card: 0 0% 100%;
+    --card-foreground: 215 14% 18%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 14% 18%;
+    --primary: 210 57% 23%; /* #1A3D5D - Azul oscuro */
+    --primary-foreground: 0 0% 100%; /* #FFFFFF - Texto sobre azul */
+    --secondary: 208 33% 75%; /* #A9C2D6 - Azul claro grisáceo */
+    --secondary-foreground: 215 14% 18%;
+    --muted: 210 40% 96.1%; /* #F5F7F9 - Fondo claro */
+    --muted-foreground: 215 14% 18%;
+    --accent: 39 92% 55%; /* #F5A623 - Amarillo mostaza */
+    --accent-foreground: 215 14% 18%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
     --border: 210 15% 88%; /* Subtle Blue-Gray Border */
@@ -39,21 +39,20 @@
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
   .dark {
-    /* Define dark theme variables if needed, maintaining consistency */
-    --background: 216 15% 15%; /* Dark Blue-Gray background */
-    --foreground: 210 15% 95%; /* Light foreground */
-    --card: 216 15% 18%;
-    --card-foreground: 210 15% 95%;
-    --popover: 216 15% 15%;
-    --popover-foreground: 210 15% 95%;
-    --primary: 180 80% 50%; /* Brighter Teal for dark mode */
-    --primary-foreground: 216 15% 10%; /* Dark text on Teal */
-    --secondary: 210 10% 25%; /* Darker Blue-Gray */
-    --secondary-foreground: 210 15% 90%;
-    --muted: 210 10% 25%;
-    --muted-foreground: 210 15% 60%;
-    --accent: 180 80% 50%;
-    --accent-foreground: 216 15% 10%;
+    --background: 215 14% 18%;
+    --foreground: 0 0% 100%;
+    --card: 215 14% 18%;
+    --card-foreground: 0 0% 100%;
+    --popover: 215 14% 18%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 210 57% 23%; /* #1A3D5D */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 208 33% 75%; /* #A9C2D6 */
+    --secondary-foreground: 215 14% 18%;
+    --muted: 210 40% 96.1%; /* #F5F7F9 */
+    --muted-foreground: 215 14% 18%;
+    --accent: 39 92% 55%; /* #F5A623 */
+    --accent-foreground: 215 14% 18%;
     --destructive: 0 70% 50%;
     --destructive-foreground: 0 0% 95%;
     --border: 210 10% 30%;

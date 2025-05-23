@@ -31,6 +31,7 @@ export default function ContactPage() {
                 <CardTitle className="text-2xl text-primary">Nuestra Información</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
+                {/*
                 <div className="flex items-start gap-3">
                   <MapPin className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
                   <div>
@@ -38,21 +39,28 @@ export default function ContactPage() {
                     <p className="text-foreground/80">123 Construction Way<br/>Building City, BC 12345<br/>Canadá</p>
                   </div>
                 </div>
-                 <div className="flex items-start gap-3">
-                  <Phone className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
-                   <div>
-                    <h3 className="font-semibold text-foreground">Telefono</h3>
-                    <a href="tel:+1234567890" className="text-foreground/80 hover:text-primary transition-colors">(123) 456-7890</a>
+                */}
+                <div className="flex items-start gap-3">
+                <Phone className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
+                <div>
+                  <h3 className="font-semibold text-foreground">Teléfono</h3>
+                  <div className="flex flex-col text-foreground/80 space-y-1">
+                    <a href="tel:+51998801864" className="hover:text-primary transition-colors">(51) 998801864</a>
+                    <a href="tel:+51967744523" className="hover:text-primary transition-colors">(51) 967744523</a>
                   </div>
                 </div>
-                 <div className="flex items-start gap-3">
-                  <Mail className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
-                  <div>
-                    <h3 className="font-semibold text-foreground">Email</h3>
-                    <a href="mailto:info@alvarezconstructora.com" className="text-foreground/80 hover:text-primary transition-colors">info@alvarezconstructora.com</a>
+              </div>
+              <div className="flex items-start gap-3">
+                <Mail className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
+                <div>
+                  <h3 className="font-semibold text-foreground">Email</h3>
+                  <div className="flex flex-col text-foreground/80 space-y-1">
+                    <a href="mailto:herbert.alvarez@gzasolutions.com" className="hover:text-primary transition-colors">herbert.alvarez@gzasolutions.com</a>
+                    <a href="mailto:albino.gomez@gzasolutions.com" className="hover:text-primary transition-colors">albino.gomez@gzasolutions.com</a>
                   </div>
                 </div>
-              </CardContent>
+              </div>
+            </CardContent>
             </Card>
 
              {/* Placeholder Map */}
