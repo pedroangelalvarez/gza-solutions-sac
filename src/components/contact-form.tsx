@@ -33,6 +33,8 @@ const formSchema = z.object({
   }),
 });
 
+const CONTACT_MAIL = process.env.NEXT_PUBLIC_ASK_API_PRODUCTION;
+
 export function ContactForm() {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -50,17 +52,36 @@ export function ContactForm() {
   // Placeholder submit handler
   async function onSubmit(values: z.infer<typeof formSchema>) {
     setIsSubmitting(true);
-    console.log('Formulario enviado:', values);
-
-    // Simular llamada a la API
-    await new Promise(resolve => setTimeout(resolve, 1500));
-
-    setIsSubmitting(false);
-    toast({
-      title: '¡Mensaje enviado!',
-      description: 'Gracias por contactarnos. Nos pondremos en contacto contigo pronto.',
-    });
-    form.reset(); // Restablecer los campos del formulario tras el envío exitoso
+  
+    try {
+      const response = await fetch(CONTACT_MAIL+"/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(values),
+      });
+  
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.error || "Error al enviar el mensaje");
+      }
+  
+      toast({
+        title: "¡Mensaje enviado!",
+        description: "Gracias por contactarnos. Nos pondremos en contacto contigo pronto.",
+      });
+  
+      form.reset();
+    } catch (error: any) {
+      toast({
+        variant: "destructive",
+        title: "Error",
+        description: error.message || "No se pudo enviar el mensaje.",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   }
 
   return (
@@ -72,9 +93,9 @@ export function ContactForm() {
             name="name"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Name</FormLabel>
+                <FormLabel>Nombre</FormLabel>
                 <FormControl>
-                  <Input placeholder="Tu nombre" {...field} aria-required="true" />
+                  <Input placeholder="Tu nombre" className="placeholder:text-foreground/70" {...field} aria-required="true" />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -87,7 +108,7 @@ export function ContactForm() {
               <FormItem>
                 <FormLabel>Email</FormLabel>
                 <FormControl>
-                  <Input type="email" placeholder="tu.correo@ejemplo.com" {...field} aria-required="true" />
+                  <Input type="email" placeholder="tucorreo@ejemplo.com" className="placeholder:text-foreground/70" {...field} aria-required="true" />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -99,9 +120,9 @@ export function ContactForm() {
           name="subject"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Subject</FormLabel>
+              <FormLabel>Asunto</FormLabel>
               <FormControl>
-                <Input placeholder="Asunto de tu mensaje" {...field} aria-required="true" />
+                <Input placeholder="Asunto de tu mensaje" className="placeholder:text-foreground/70" {...field} aria-required="true" />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -112,11 +133,11 @@ export function ContactForm() {
           name="message"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Message</FormLabel>
+              <FormLabel>Mensaje</FormLabel>
               <FormControl>
                 <Textarea
                   placeholder="Cuéntanos cómo podemos ayudarte..."
-                  className="min-h-[120px]"
+                  className="min-h-[120px] placeholder:text-foreground/70"
                   {...field}
                   aria-required="true"
                 />

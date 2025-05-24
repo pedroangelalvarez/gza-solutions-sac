@@ -17,13 +17,13 @@ export default function AboutPage() {
 
       <div className="grid md:grid-cols-2 gap-10 items-center mb-16">
         <div>
-          <p className="text-lg text-foreground/80 mb-4">
+          <p className="text-lg text-foreground/80 mb-4 text-justify">
             GZA Solutions es una empresa especializada en el análisis de integridad estructural dentro del marco de gestión de activos basado en la norma ISO 55000. Nuestro enfoque se basa en la innovación mediante el uso, desarrollo y aplicación de herramientas de simulación numérica avanzada, dirigidas a la integridad estructural, diseño y optimización.
           </p>
-          <p className="text-lg text-foreground/80 mb-4">
+          <p className="text-lg text-foreground/80 mb-4 text-justify">
             Implementamos simulaciones FEM (método de elementos finitos) y análisis de performance en procesos de flujo usando DEM (método de elementos discretos), aplicadas principalmente al rediseño de chutes y tolvas. Estas soluciones permiten aportar un alto valor agregado mediante tecnología de clase mundial.
           </p>
-          <p className="text-lg text-foreground/80">
+          <p className="text-lg text-foreground/80 text-justify">
             En GZA Solutions fomentamos una cultura de investigación, desarrollo e innovación constante, ofreciendo soluciones industriales con tecnologías emergentes que generan verdadero valor para nuestros clientes.
           </p>
         </div>
@@ -43,14 +43,14 @@ export default function AboutPage() {
       <div className="grid md:grid-cols-2 gap-10">
         <div className="bg-gray-100 dark:bg-gray-800 p-6 rounded-xl shadow-md">
           <h2 className="text-2xl font-semibold mb-4">Misión</h2>
-          <p className="text-lg text-foreground/80">
+          <p className="text-lg text-foreground/80 text-justify">
             Generar soluciones innovadoras con base en ingeniería, proporcionando alto valor agregado mediante tecnologías de clase mundial, mejorando la gestión de activos de nuestros clientes.
           </p>
         </div>
 
         <div className="bg-gray-100 dark:bg-gray-800 p-6 rounded-xl shadow-md">
           <h2 className="text-2xl font-semibold mb-4">Visión</h2>
-          <p className="text-lg text-foreground/80">
+          <p className="text-lg text-foreground/80 text-justify">
             Ser reconocidos como líderes en soluciones de ingeniería innovadoras aplicadas a la gestión de activos a nivel nacional e internacional.
           </p>
         </div>

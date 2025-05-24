@@ -3,6 +3,12 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { MapPin, Phone, Mail } from 'lucide-react';
 
 export default function ContactPage() {
+  const lat = -12.093023293630683;
+    const lng = -77.02620515044674;
+    const zoom = 18;
+  
+    const mapUrl = `https://www.google.com/maps?q=${lat},${lng}&z=${zoom}&output=embed`;
+  
   return (
     <div className="bg-background py-16 md:py-24">
       <div className="container mx-auto px-4">
@@ -31,15 +37,15 @@ export default function ContactPage() {
                 <CardTitle className="text-2xl text-primary">Nuestra Información</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
-                {/*
+                {
                 <div className="flex items-start gap-3">
                   <MapPin className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
                   <div>
                     <h3 className="font-semibold text-foreground">Dirección</h3>
-                    <p className="text-foreground/80">123 Construction Way<br/>Building City, BC 12345<br/>Canadá</p>
+                    <p className="text-foreground/80">Dean valdivia 243<br/>San Isidro<br/>Perú</p>
                   </div>
                 </div>
-                */}
+                }
                 <div className="flex items-start gap-3">
                 <Phone className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
                 <div>
@@ -65,7 +71,15 @@ export default function ContactPage() {
 
              {/* Placeholder Map */}
              <div className="h-64 bg-muted rounded-lg flex items-center justify-center text-muted-foreground border border-border">
-               <MapPin className="h-10 w-10 mr-2"/> Área de mapa de marcador de posición
+             <iframe
+                title="Mapa"
+                src={mapUrl}
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen={true}
+                loading="lazy"
+              />
              </div>
           </div>
         </div>
