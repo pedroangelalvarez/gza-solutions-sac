@@ -7,8 +7,9 @@ import { usePathname } from 'next/navigation';
 import { Menu, X, HardHat } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
-import { Sheet, SheetContent, SheetTrigger, SheetClose } from '@/components/ui/sheet';
+import { Sheet, SheetContent, SheetTrigger, SheetClose, SheetTitle } from '@/components/ui/sheet';
 import { cn } from '@/lib/utils';
+import { Skeleton } from '@/components/ui/skeleton';
 
 const navItems = [
   { href: '/', label: 'Inicio' },
@@ -27,8 +28,21 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center gap-2 mr-6">
-          <div className="relative h-10 w-36">
-            <Image src="/GZASolutionsSAClogo.svg" alt="GZA Solutions S.A.C. Logo" fill className="object-contain" />
+          <div className="relative h-8 w-28">
+            <Image 
+              src="/GZASolutionsSAClogo.svg" 
+              alt="GZA Solutions S.A.C. Logo" 
+              fill 
+              className="object-contain" 
+              loading="lazy"
+              onLoadingComplete={(img) => {
+                img.classList.remove('opacity-0');
+              }}
+              onError={(e) => {
+                e.currentTarget.classList.remove('opacity-0');
+              }}
+            />
+            <Skeleton className="absolute inset-0 -z-10" />
           </div>
           <span className="font-bold text-lg">GZA Solutions S.A.C.</span>
         </Link>
@@ -59,17 +73,35 @@ export function Header() {
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="w-full max-w-xs sm:max-w-sm">
-               <div className="flex justify-between items-center mb-6">
+              <SheetTitle className="sr-only">Menú de navegación</SheetTitle>
+              <div className="flex justify-between items-center mb-6">
                  <Link href="/" className="flex items-center gap-2" onClick={() => setIsMobileMenuOpen(false)}>
-                   <HardHat className="h-6 w-6 text-primary" />
+                   <div className="relative h-6 w-20">
+                     <Image 
+                       src="/GZASolutionsSAClogo.svg" 
+                       alt="GZA Solutions S.A.C. Logo" 
+                       fill 
+                       className="object-contain opacity-0 transition-opacity duration-300" 
+                       loading="lazy"
+                       onLoadingComplete={(img) => {
+                         img.classList.remove('opacity-0');
+                       }}
+                       onError={(e) => {
+                         e.currentTarget.classList.remove('opacity-0');
+                       }}
+                     />
+                     <Skeleton className="absolute inset-0 -z-10" />
+                   </div>
                    <span className="font-bold text-lg">GZA Solutions S.A.C.</span>
                  </Link>
-                <SheetClose asChild>
+                 {/* Close Button
+                 <SheetClose asChild>
                    <Button variant="ghost" size="icon">
                     <X className="h-6 w-6" />
                     <span className="sr-only">Close Menu</span>
                   </Button>
                 </SheetClose>
+                  */}
                </div>
               <nav className="flex flex-col space-y-4">
                 {navItems.map((item) => (

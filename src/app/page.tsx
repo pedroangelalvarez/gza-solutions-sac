@@ -38,7 +38,7 @@ export default function HomePage() {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">Bienvenido a GZA Solutions</h2>
           <p className="text-lg text-foreground/70 max-w-3xl mx-auto">
-            Somos una empresa especializada en soluciones integrales para la construcción minera. Aplicamos tecnología de punta, ingeniería avanzada y un enfoque colaborativo para optimizar cada etapa del proyecto.
+          Somos una empresa especializada en soluciones integrales de ingeniería, mantenimiento y construcción, que aplica tecnología de punta y un enfoque colaborativo para optimizar cada etapa del proyecto.
           </p>
           <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-card p-6 rounded-lg shadow-sm border border-border transition-shadow hover:shadow-md">

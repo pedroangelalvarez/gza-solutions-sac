@@ -4,6 +4,7 @@ import * as React from 'react';
 import Image from 'next/image';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Skeleton } from '@/components/ui/skeleton';
 import { cn } from '@/lib/utils';
 
 interface CarouselProps {
@@ -35,15 +36,24 @@ export function Carousel({ images, className, ...props }: CarouselProps & React.
 
   return (
     <div className={cn("relative w-full h-full overflow-hidden group", className)} {...props}>
-      <Image
-        src={images[currentIndex].src}
-        alt={images[currentIndex].alt}
-        fill
-        className="object-cover opacity-100 transition-opacity duration-500"
-        quality={100}
-        priority
-        sizes="100vw"
-      />
+      <div className="relative w-full h-full">
+        <Image
+          src={images[currentIndex].src}
+          alt={images[currentIndex].alt}
+          fill
+          className="object-cover opacity-0 transition-opacity duration-500"
+          quality={100}
+          priority
+          sizes="100vw"
+          onLoadingComplete={(img) => {
+            img.classList.remove('opacity-0');
+          }}
+          onError={(e) => {
+            e.currentTarget.classList.remove('opacity-0');
+          }}
+        />
+        <Skeleton className="absolute inset-0 -z-10" />
+      </div>
 
       {/* Navigation Buttons */}
       <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
