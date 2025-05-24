@@ -42,7 +42,6 @@ export function Header() {
                 e.currentTarget.classList.remove('opacity-0');
               }}
             />
-            <Skeleton className="absolute inset-0 -z-10" />
           </div>
           <span className="font-bold text-lg">GZA Solutions S.A.C.</span>
         </Link>
@@ -90,7 +89,6 @@ export function Header() {
                          e.currentTarget.classList.remove('opacity-0');
                        }}
                      />
-                     <Skeleton className="absolute inset-0 -z-10" />
                    </div>
                    <span className="font-bold text-lg">GZA Solutions S.A.C.</span>
                  </Link>
